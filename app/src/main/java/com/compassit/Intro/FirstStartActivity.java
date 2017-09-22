@@ -1,8 +1,6 @@
 package com.compassit.Intro;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.FloatRange;
@@ -12,10 +10,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.compassit.R;
-import com.compassit.Slides.FirstStartSlide;
+import com.compassit.Slides.LevelSlide;
+import com.compassit.Slides.ProfessionSlide;
 
 import agency.tango.materialintroscreen.MaterialIntroActivity;
-import agency.tango.materialintroscreen.MessageButtonBehaviour;
 import agency.tango.materialintroscreen.SlideFragmentBuilder;
 import agency.tango.materialintroscreen.animations.IViewTranslation;
 
@@ -57,10 +55,11 @@ public class FirstStartActivity extends MaterialIntroActivity {
                     .description("Если вы ищете направление для развития, то подборка популярных технологий его вам предоставит!")
                     .build());
 
-            addSlide(new FirstStartSlide());
+            addSlide(new ProfessionSlide());
+            addSlide(new );
         }
         else {
-            
+
         }
     }
 

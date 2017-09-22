@@ -1,6 +1,7 @@
 package com.compassit.Slides;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 
+import com.compassit.Intro.FirstStartActivity;
+import com.compassit.Intro.WhoActivityIntro;
 import com.compassit.R;
 
 import agency.tango.materialintroscreen.SlideFragment;
@@ -34,10 +37,9 @@ public class FirstStartSlide extends SlideFragment {
         Yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putBoolean("firststart", true);
-                editor.commit();
+                Intent i = new Intent(getContext(), WhoActivityIntro.class);
+                startActivity(i);
+                getActivity().finish();
             }
         });
         No.setOnClickListener(new View.OnClickListener() {
