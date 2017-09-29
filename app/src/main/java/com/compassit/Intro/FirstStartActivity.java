@@ -56,7 +56,7 @@ public class FirstStartActivity extends MaterialIntroActivity {
                     .build());
 
             addSlide(new ProfessionSlide());
-            addSlide(new );
+            addSlide(new LevelSlide());
         }
         else {
 

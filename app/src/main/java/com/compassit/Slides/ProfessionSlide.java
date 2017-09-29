@@ -22,7 +22,7 @@ public class ProfessionSlide extends SlideFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.fragment_first_start, container, false);
+        final View view = inflater.inflate(R.layout.profession_slide, container, false);
 
         Boss = (Button) view.findViewById(R.id.boss);
         PM = (Button) view.findViewById(R.id.pm);
@@ -40,6 +40,12 @@ public class ProfessionSlide extends SlideFragment {
                 Choice = "boss";
             }
         });
+        Unknow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Choice = "lamer";
+            }
+        });
         return view;
     }
     @Override
@@ -49,5 +55,14 @@ public class ProfessionSlide extends SlideFragment {
     @Override
     public String cantMoveFurtherErrorMessage() {
         return "Выберете вариант";
+    }
+    @Override
+    public int backgroundColor() {
+        return R.color.custom_slide_background;
+    }
+
+    @Override
+    public int buttonsColor() {
+        return R.color.custom_slide_buttons;
     }
 }

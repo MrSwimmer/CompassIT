@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<agency.tango.materialintroscreen.parallax.ParallaxLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="wrap_content"
+
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/beginer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Начинающий"/>
+
+            <Button
+                android:id="@+id/junior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Junior"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="middle"/>
+
+            <Button
+                android:id="@+id/senior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="senior"/>
+        </TableRow>
+
+    </TableLayout>
+</agency.tango.materialintroscreen.parallax.ParallaxLinearLayout>
