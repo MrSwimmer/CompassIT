@@ -1,10 +1,12 @@
-package com.compassit.API.GETPage;
+package com.compassit.API.hh;
 
 /**
  * Created by Севастьян on 29.09.2017.
  */
 
 import java.util.List;
+
+import com.compassit.API.hh.GETPage.Item;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

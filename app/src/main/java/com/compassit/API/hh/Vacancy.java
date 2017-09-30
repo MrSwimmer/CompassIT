@@ -1,13 +1,13 @@
-package com.compassit.API;
+package com.compassit.API.hh;
 
 /**
  * Created by Севастьян on 26.09.2017.
  */
 import java.util.List;
 
-import com.compassit.API.Elements.Address;
-import com.compassit.API.Elements.Experience;
-import com.compassit.API.Elements.Specialization;
+import com.compassit.API.hh.GETVacancy.Address;
+import com.compassit.API.hh.GETVacancy.Experience;
+import com.compassit.API.hh.GETVacancy.Specialization;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

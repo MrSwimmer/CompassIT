@@ -1,14 +1,13 @@
-package com.compassit.API.GETPage;
-
-/**
- * Created by Севастьян on 29.09.2017.
- */
+package com.compassit.API.hh.GETVacancy;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Type {
+/**
+ * Created by Севастьян on 27.09.2017.
+ */
 
+public class Experience {
     @SerializedName("id")
     @Expose
     private String id;

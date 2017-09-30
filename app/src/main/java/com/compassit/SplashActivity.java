@@ -1,34 +1,29 @@
 package com.compassit;
 
 import android.app.Activity;
-import android.util.Log;
 
-import com.compassit.API.APIService;
-import com.compassit.API.Vacancy;
-import com.compassit.API.GETPage.PageV;
+import com.compassit.API.hh.APIService;
+import com.compassit.API.hh.Vacancy;
 
 import java.util.ArrayList;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SplashActivity extends Activity {
 
     private APIService service;
     ArrayList<String> masid = new ArrayList<String>();
     ArrayList<Vacancy> masvac = new ArrayList<Vacancy>();
-    ArrayList<String> KeyWords = new ArrayList<String>();
+    String KeyWords[] = new String[10];
     @Override
     protected void onStart() {
         super.onStart();
         setContentView(R.layout.splash);
-        KeyWords.add("Android");
-        KeyWords.add("Андроид");
-        SearchID searchID = new SearchID();
-        searchID.execute(KeyWords);
+        SearchStack searchStack = new SearchStack();
+        searchStack.execute();
+       //////////////////////////////////////////
+//        SearchID searchID = new SearchID();
+//        searchID.execute();
+        ///////////////////////////////////////////
+
 //        Retrofit retrofit = new Retrofit.Builder()
 //                .baseUrl("https://api.hh.ru")
 //                .addConverterFactory(GsonConverterFactory.create())

@@ -1,4 +1,4 @@
-package com.compassit.API.Elements;
+package com.compassit.API.hh.GETVacancy;
 
 /**
  * Created by Севастьян on 27.09.2017.

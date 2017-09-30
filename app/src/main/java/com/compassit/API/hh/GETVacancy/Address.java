@@ -1,4 +1,4 @@
-package com.compassit.API.Elements;
+package com.compassit.API.hh.GETVacancy;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
