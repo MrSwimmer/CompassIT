@@ -80,6 +80,7 @@ public class SearchID extends AsyncTask<String, Integer, Void> {
                                         }
                                     }
                                 }
+
                                 catch (Exception e){
                                     Log.i("code", "err " + e);
                                 }

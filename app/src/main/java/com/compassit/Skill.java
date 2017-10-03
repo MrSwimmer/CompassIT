@@ -1,5 +1,7 @@
 package com.compassit;
 
+import java.util.Comparator;
+
 /**
  * Created by Севастьян on 03.10.2017.
  */
@@ -26,4 +28,10 @@ class Skill {
     public void addCount() {
         this.count++;
     }
+    public static final Comparator<Skill> COMPARE_BY_COUNT = new Comparator<Skill>() {
+        @Override
+        public int compare(Skill lhs, Skill rhs) {
+            return rhs.getCount() - lhs.getCount();
+        }
+    };
 }

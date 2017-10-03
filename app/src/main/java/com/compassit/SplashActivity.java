@@ -17,6 +17,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import java.util.Collections;
 import java.util.List;
 
 
@@ -47,6 +48,8 @@ public class SplashActivity extends Activity {
         skill.setSkill("android");
         masskills.add(skill);
 
+        //Парсим сначала id, затем сами вакансии и добавляем их keyskills в бд
+        //с тегом вакансии. Пример: android
         SearchID searchID = new SearchID();
         searchID.execute("android");
 
@@ -55,10 +58,11 @@ public class SplashActivity extends Activity {
         getTop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                masskills.clear();
+                //гоним по базе
                 mRealm.beginTransaction();
-
                 RealmResults<VacancysSkills> books = mRealm.allObjects(VacancysSkills.class);
-
                 if(!books.isEmpty()) {
 
                     for(int i = books.size() - 1; i >= 0; i--) {
@@ -66,12 +70,14 @@ public class SplashActivity extends Activity {
                         String skills = books.get(i).getSkills();
                         String area = books.get(i).getArea();
                         int pos=0;
+                        //Строка стека в виде Скилл,Скилл,
                         for(int k=0; k<skills.length();k++){
                             if(skills.charAt(k)==','){
                                 String sub = skills.substring(pos,k).toLowerCase();
                                 boolean meet = false;
                                 for(int p=0; p<masskills.size(); p++){
                                     //Log.i("code", masskills.get(p).getSkill()+" "+ sub);
+                                    //Если нашли, то плюсуем
                                     if(masskills.get(p).getSkill().equals(sub)){
                                         masskills.get(p).addCount();
                                         meet = true;
@@ -85,18 +91,16 @@ public class SplashActivity extends Activity {
                                     Skill skill = new Skill();
                                     skill.setSkill(sub);
                                     skill.addCount();
+                                    //если такого еще не было, то добавляем в Arraylist
                                     masskills.add(skill);
                                 }
                                 pos=k+1;
                             }
                         }
                     }
-//                    Collections.sort(masskills, new Comparator<Skill>() {
-//                        @Override
-//                        public int compare(Skill o1, Skill o2) {
-//                            return o1.toString().compareTo(o2.toString());
-//                        }
-//                    });
+
+                    //сортируем полученный ArrayList
+                    Collections.sort(masskills, Skill.COMPARE_BY_COUNT);
                     for(int p=0; p<masskills.size(); p++){
                         Log.i("code", "s: "+masskills.get(p).getSkill()+ " c: "+masskills.get(p).getCount());
                     }
