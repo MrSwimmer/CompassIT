@@ -1,13 +1,10 @@
-package com.compassit.API.hh;
+package com.compassit.API.hh.GETVacancy;
 
 /**
  * Created by Севастьян on 26.09.2017.
  */
 import java.util.List;
 
-import com.compassit.API.hh.GETVacancy.Address;
-import com.compassit.API.hh.GETVacancy.Experience;
-import com.compassit.API.hh.GETVacancy.Specialization;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -41,11 +38,11 @@ public class Vacancy {
         this.address = address;
     }
 
-    public List<Object> getKeySkills() {
+    public List<KeySkills> getKeySkills() {
         return keySkills;
     }
 
-    public void setKeySkills(List<Object> keySkills) {
+    public void setKeySkills(List<KeySkills> keySkills) {
         this.keySkills = keySkills;
     }
 
@@ -60,6 +57,7 @@ public class Vacancy {
     public String getName() {
         return name;
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -91,7 +89,7 @@ public class Vacancy {
 
     @SerializedName("key_skills")
     @Expose
-    private List<Object> keySkills = null;
+    private List<KeySkills> keySkills = null;
 
     @SerializedName("id")
     @Expose

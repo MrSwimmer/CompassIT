@@ -1,4 +1,4 @@
-package com.compassit.API.hh;
+package com.compassit.API.hh.GETPage;
 
 /**
  * Created by Севастьян on 29.09.2017.

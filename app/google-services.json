@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "277661461687",
+    "firebase_url": "https://compassit-36b40.firebaseio.com",
+    "project_id": "compassit-36b40",
+    "storage_bucket": "compassit-36b40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277661461687:android:91220eb8b0c92d59",
+        "android_client_info": {
+          "package_name": "com.compassit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277661461687-m82kl3fghid9tag1m9lp2kcp75kag8do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpvNshMtMT3b-Ikajw7Rw13aVwzofb6Sk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
